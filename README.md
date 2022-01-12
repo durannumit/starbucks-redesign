@@ -22,7 +22,8 @@
   App 
 </p>
 
-<img src="[Assets/icon.png](https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/app.png)" height="400">
+<img src="https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/app.png" height="400">
+
 
 
 <p align="center">
@@ -31,7 +32,6 @@ Starbucks App Redesign is a small Flutter UI Challange[Under development]
 
 
 ## Roadmap
-------------
 
  * [x] Splash Screen
  * [ ] Login Screen
@@ -44,7 +44,7 @@ Starbucks App Redesign is a small Flutter UI Challange[Under development]
 
 
 ##  Contributing
-------------
+
 Feel free to contribute
 
  1. **Fork** the repo on GitHub
@@ -55,7 +55,6 @@ Feel free to contribute
 
 
 ## Contributors ✨
-------------
 
 
 * [Ümit Duran](https://github.com/durannumit)
