@@ -3,6 +3,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:starbucks_redesign/pages/splash_screen.dart';
+import 'package:starbucks_redesign/utils/routes/routes.dart';
+
+import 'constants/app_theme.dart';
+import 'constants/colors.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,11 +32,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      color: AppColors.background,
       debugShowCheckedModeBanner: false,
       title: 'Starbucks',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: themeData,
+      routes: Routes.routes,
       home: const SplashScreen(),
     );
   }
