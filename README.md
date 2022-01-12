@@ -1,16 +1,50 @@
-# starbucks_redesign
+<h1 align="center"> Starbucks App Redesign </h1>
 
-A new Flutter project.
+<p align="center">
+  <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+  <a href="https://twitter.com/flutterist"><img alt="API" src="https://img.shields.io/twitter/follow/flutterist?style=social"/></a>
+</p>
 
-## Getting Started
+<p align="center">
+  Design
+</p>
 
-This project is a starting point for a Flutter application.
+![Design](https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/design.png)
+<p align="center">
+  Design by: <a href="https://t.co/460gSXFNrv">Betül Üsküdar</a>
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+<p align="center">
+  App 
+</p>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![App](https://github.com/durannumit/valorant-guide/blob/main/screenshots/app.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+<p align="center">
+Starbucks App Redesign is a small Flutter UI Challange[Under development]
+</p>
+
+
+### Contributors ✨
+
+
+* [Ümit Duran](https://github.com/durannumit)
+
+
+### License
+```xml
+Copyright 2022 by Umit Duran
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
