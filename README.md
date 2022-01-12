@@ -1,8 +1,12 @@
 <h1 align="center"> Starbucks App Redesign </h1>
 
 <p align="center">
-  <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+ <a href=""><img alt="License" src="https://img.shields.io/github/stars/durannumit/starbucks-redesign"/></a>
+ <a href=""><img alt="License" src="  https://img.shields.io/github/contributors/durannumit/starbucks-redesign"/></a>
+ <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
   <a href="https://twitter.com/flutterist"><img alt="API" src="https://img.shields.io/twitter/follow/flutterist?style=social"/></a>
+
+
 </p>
 
 <p align="center">
@@ -18,7 +22,7 @@
   App 
 </p>
 
-![App](https://github.com/durannumit/valorant-guide/blob/main/screenshots/app.png)
+<img src="[Assets/icon.png](https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/app.png)" height="400">
 
 
 <p align="center">
@@ -26,13 +30,39 @@ Starbucks App Redesign is a small Flutter UI Challange[Under development]
 </p>
 
 
-### Contributors ✨
+## Roadmap
+------------
+
+ * [x] Splash Screen
+ * [ ] Login Screen
+ * [ ] Home Screen
+ * [ ] Order Screen
+ * [ ] Order Detail Screen
+ * [ ] Menu/Detail Screen
+ * [ ] Order/Completed Screen
+ * [ ] Home/Status Screen
+
+
+##  Contributing
+------------
+Feel free to contribute
+
+ 1. **Fork** the repo on GitHub
+ 2. **Clone** the project to your own machine
+ 3. **Commit** changes to your own branch
+ 4. **Push** your work back up to your fork
+ 5. Submit a **Pull request** so that we can review your changes
+
+
+## Contributors ✨
+------------
 
 
 * [Ümit Duran](https://github.com/durannumit)
 
 
-### License
+## License
+
 ```xml
 Copyright 2022 by Umit Duran
 
