@@ -1,7 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:starbucks_redesign/constants/colors.dart';
+import 'package:starbucks_redesign/constants/dimens.dart';
+import 'package:starbucks_redesign/utils/device/device_utils.dart';
 import 'package:starbucks_redesign/utils/routes/routes.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -20,12 +23,24 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: AppColors.background,
-      child: Center(
-        child: SizedBox(height: 64, width: 64, child: Container() //SvgPicture.asset('assets/icons/valorant_icon.svg'),
+    return Stack(
+      children: [
+        SvgPicture.asset(
+          'assets/images/splash_background.svg',
+          alignment: Alignment.center,
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+        ),
+        Positioned.fill(
+          child: Align(
+            alignment: Alignment.center,
+            child: SizedBox(
+              width: DeviceUtils.getScaledHeight(context, 0.5),
+              child: SvgPicture.asset('assets/images/starbucks_logo.svg'),
             ),
-      ),
+          ),
+        ),
+      ],
     );
   }
 
