@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:starbucks_redesign/constants/colors.dart';
-import 'package:starbucks_redesign/utils/device/device_utils.dart';
 import 'package:starbucks_redesign/utils/routes/routes.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -18,7 +16,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     _emailController = TextEditingController();

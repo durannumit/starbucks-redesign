@@ -13,10 +13,7 @@ Future<void> main() async {
   await setPreferredOrientations();
   return runZonedGuarded(() async {
     runApp(const MyApp());
-  }, (error, stack) {
-    print(stack);
-    print(error);
-  });
+  }, (error, stack) {});
 }
 
 Future<void> setPreferredOrientations() {

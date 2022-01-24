@@ -2,8 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:starbucks_redesign/constants/colors.dart';
-import 'package:starbucks_redesign/constants/dimens.dart';
 import 'package:starbucks_redesign/utils/device/device_utils.dart';
 import 'package:starbucks_redesign/utils/routes/routes.dart';
 
