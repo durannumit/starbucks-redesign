@@ -12,6 +12,25 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  late TextEditingController _emailController;
+  late TextEditingController _passwordController;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    _emailController = TextEditingController();
+    _passwordController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -23,28 +42,65 @@ class _LoginScreenState extends State<LoginScreen> {
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
           ),
-          Positioned(
-            left: 20,
-            top: MediaQuery.of(context).size.height * 0.2,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SvgPicture.asset(
-                  'assets/images/starbucks_name.svg',
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 40.0),
-                  child: Text(
-                    "Welcome Back!",
-                    style: TextStyle(color: AppColors.dark, fontSize: 30, fontWeight: FontWeight.w700),
-                  ),
-                )
-              ],
-            ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(20.0, MediaQuery.of(context).size.height * 0.2, 20.0, 20.0),
+            child: body(),
           )
         ],
       ),
+    );
+  }
+
+  Widget body() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SvgPicture.asset(
+          'assets/images/starbucks_name.svg',
+        ),
+        const Padding(
+          padding: EdgeInsets.only(top: 40.0),
+          child: Text(
+            "Welcome Back!",
+            style: TextStyle(color: AppColors.dark, fontSize: 30, fontWeight: FontWeight.w700),
+          ),
+        ),
+        const Padding(
+          padding: EdgeInsets.only(top: 12.0),
+          child: Text(
+            "Lorem ipsum dolor sit amet, consectetur \nadipiscing elit sed do eiusmod tempor",
+            style: TextStyle(color: AppColors.dark, fontSize: 14, fontWeight: FontWeight.w400),
+          ),
+        ),
+        const Padding(
+          padding: EdgeInsets.only(top: 12.0),
+          child: TextField(
+            obscureText: true,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Email',
+            ),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 12.0),
+          child: TextField(
+            controller: _emailController,
+            obscureText: true,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Password',
+              suffixIcon: IconButton(
+                onPressed: _emailController.clear,
+                icon: SvgPicture.asset(
+                  'assets/icon/password_suffix_icon.svg',
+                ),
+              ),
+            ),
+          ),
+        )
+      ],
     );
   }
 }
