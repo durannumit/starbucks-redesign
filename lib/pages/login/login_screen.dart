@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:starbucks_redesign/constants/colors.dart';
 import 'package:starbucks_redesign/utils/device/device_utils.dart';
+import 'package:starbucks_redesign/utils/routes/routes.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -129,7 +130,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushReplacementNamed(Routes.home);
+              },
               child: const Center(
                   child: Text(
                 'Login',
