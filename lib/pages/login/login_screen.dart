@@ -34,19 +34,24 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Stack(
-        children: [
-          SvgPicture.asset(
-            'assets/images/login_background.svg',
-            alignment: Alignment.center,
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-          ),
-          Padding(
-            padding: EdgeInsets.fromLTRB(20.0, MediaQuery.of(context).size.height * 0.2, 20.0, 20.0),
-            child: body(),
-          )
-        ],
+      child: GestureDetector(
+        onTap: () {
+          FocusScope.of(context).unfocus();
+        },
+        child: Stack(
+          children: [
+            SvgPicture.asset(
+              'assets/images/login_background.svg',
+              alignment: Alignment.center,
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(20.0, MediaQuery.of(context).size.height * 0.2, 20.0, 20.0),
+              child: body(),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -84,12 +89,12 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 12.0),
+          padding: const EdgeInsets.only(top: 12.0),
           child: TextField(
             controller: _emailController,
             obscureText: true,
             decoration: InputDecoration(
-              border: OutlineInputBorder(),
+              border: const OutlineInputBorder(),
               labelText: 'Password',
               suffixIcon: IconButton(
                 onPressed: _emailController.clear,
@@ -97,6 +102,39 @@ class _LoginScreenState extends State<LoginScreen> {
                   'assets/icon/password_suffix_icon.svg',
                 ),
               ),
+            ),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.075),
+          child: const Align(
+            alignment: Alignment.centerRight,
+            child: Text(
+              "Forgot your password?",
+              style: TextStyle(color: AppColors.darkGrey, fontSize: 14, fontWeight: FontWeight.w600),
+            ),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.05),
+          child: SizedBox(
+            height: 50,
+            child: ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(AppColors.mainGreen),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    side: const BorderSide(color: AppColors.mainGreen),
+                  ),
+                ),
+              ),
+              onPressed: () {},
+              child: const Center(
+                  child: Text(
+                'Login',
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+              )),
             ),
           ),
         )
