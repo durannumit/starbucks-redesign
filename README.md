@@ -22,7 +22,7 @@
   App 
 </p>
 
-<img src="https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/app.png" height="400">
+<img src="https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/app.png" height="400"> <img src="https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/login.png" height="400">
 
 
 
