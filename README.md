@@ -22,7 +22,8 @@
   App 
 </p>
 
-<img src="https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/app.png" height="400"> <img src="https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/login.png" height="400">
+<img src="https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/app.png" height="400"> <img src="https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/login.png" height="400"> <img src="https://user-images.githubusercontent.com/29631083/151706246-d89de59d-93d2-48a8-8d49-d4c0ddecc8e3.png" height="400">
+
 
 
 
@@ -38,7 +39,7 @@ Starbucks App Redesign is a small Flutter UI Challange[Under development]
  * [ ] Home Screen
  * [ ] Order Screen
  * [ ] Order Detail Screen
- * [ ] Menu/Detail Screen
+ * [x] Menu/Detail Screen
  * [ ] Order/Completed Screen
  * [ ] Home/Status Screen
 
@@ -58,6 +59,7 @@ Feel free to contribute
 
 
 * [Ümit Duran](https://github.com/durannumit)
+* [Emre Coşkunçay](https://github.com/coskuncay)
 
 
 ## License

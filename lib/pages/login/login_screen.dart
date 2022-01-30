@@ -13,6 +13,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   late TextEditingController _emailController;
   late TextEditingController _passwordController;
+  bool isObscure = true;
 
   @override
   void initState() {
@@ -45,7 +46,8 @@ class _LoginScreenState extends State<LoginScreen> {
               height: MediaQuery.of(context).size.height,
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(20.0, MediaQuery.of(context).size.height * 0.2, 20.0, 20.0),
+              padding: EdgeInsets.fromLTRB(
+                  20.0, MediaQuery.of(context).size.height * 0.2, 20.0, 20.0),
               child: body(),
             )
           ],
@@ -66,20 +68,26 @@ class _LoginScreenState extends State<LoginScreen> {
           padding: EdgeInsets.only(top: 40.0),
           child: Text(
             "Welcome Back!",
-            style: TextStyle(color: AppColors.dark, fontSize: 30, fontWeight: FontWeight.w700),
+            style: TextStyle(
+                color: AppColors.dark,
+                fontSize: 30,
+                fontWeight: FontWeight.w700),
           ),
         ),
         const Padding(
           padding: EdgeInsets.only(top: 12.0),
           child: Text(
             "Lorem ipsum dolor sit amet, consectetur \nadipiscing elit sed do eiusmod tempor",
-            style: TextStyle(color: AppColors.dark, fontSize: 14, fontWeight: FontWeight.w400),
+            style: TextStyle(
+                color: AppColors.dark,
+                fontSize: 14,
+                fontWeight: FontWeight.w400),
           ),
         ),
         const Padding(
           padding: EdgeInsets.only(top: 12.0),
           child: TextField(
-            obscureText: true,
+            obscureText: false,
             decoration: InputDecoration(
               border: OutlineInputBorder(),
               labelText: 'Email',
@@ -89,13 +97,17 @@ class _LoginScreenState extends State<LoginScreen> {
         Padding(
           padding: const EdgeInsets.only(top: 12.0),
           child: TextField(
-            controller: _emailController,
-            obscureText: true,
+            controller: _passwordController,
+            obscureText: isObscure,
             decoration: InputDecoration(
               border: const OutlineInputBorder(),
               labelText: 'Password',
               suffixIcon: IconButton(
-                onPressed: _emailController.clear,
+                onPressed: () {
+                  setState(() {
+                    isObscure = !isObscure;
+                  });
+                },
                 icon: SvgPicture.asset(
                   'assets/icon/password_suffix_icon.svg',
                 ),
@@ -104,22 +116,28 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.075),
+          padding:
+              EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.075),
           child: const Align(
             alignment: Alignment.centerRight,
             child: Text(
               "Forgot your password?",
-              style: TextStyle(color: AppColors.darkGrey, fontSize: 14, fontWeight: FontWeight.w600),
+              style: TextStyle(
+                  color: AppColors.darkGrey,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600),
             ),
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.05),
+          padding:
+              EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.05),
           child: SizedBox(
             height: 50,
             child: ElevatedButton(
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(AppColors.mainGreen),
+                backgroundColor:
+                    MaterialStateProperty.all<Color>(AppColors.mainGreen),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(4.0),
@@ -128,7 +146,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               onPressed: () {
-                Navigator.of(context).pushReplacementNamed(Routes.home);
+                Navigator.of(context).pushReplacementNamed(Routes.detail);
               },
               child: const Center(
                   child: Text(
