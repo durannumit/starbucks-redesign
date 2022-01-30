@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:starbucks_redesign/constants/colors.dart';
+import 'package:starbucks_redesign/pages/home/stars_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -18,10 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
+    StarsScreen(),
     Text(
       'Index 1: Business',
       style: optionStyle,
@@ -50,18 +48,23 @@ class _HomeScreenState extends State<HomeScreen> {
           centerTitle: false,
           titleSpacing: 0,
           leadingWidth: 18,
-          flexibleSpace: Container(),
           title: Text(
             "Starbucks",
             style: Theme.of(context).textTheme.headline2,
           ),
           actions: [
-            SvgPicture.asset(
-              'assets/icon/notification_bell_icon.svg',
+            InkWell(
+              onTap: () {},
+              child: SvgPicture.asset(
+                'assets/icon/notification_bell_icon.svg',
+              ),
             ),
             const SizedBox(width: 10),
-            SvgPicture.asset(
-              'assets/icon/three_dots_icon.svg',
+            InkWell(
+              onTap: () {},
+              child: SvgPicture.asset(
+                'assets/icon/three_dots_icon.svg',
+              ),
             ),
             const SizedBox(width: 20),
           ],
