@@ -36,9 +36,14 @@ class _DetailScreenState extends State<DetailScreen> {
         backgroundColor: Colors.white,
         centerTitle: false,
         titleSpacing: 0,
-        leading: const Icon(
-          Icons.chevron_left,
-          color: Colors.black,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.chevron_left,
+            color: Colors.black,
+          ),
         ),
         flexibleSpace: Container(),
         title: Text(
@@ -128,8 +133,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     ],
                   ),
                   Padding(
-                    padding: EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height * 0.05),
+                    padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.05),
                     child: SizedBox(
                       height: 50,
                       child: ElevatedButton(
@@ -137,12 +141,10 @@ class _DetailScreenState extends State<DetailScreen> {
                           backgroundColor: MaterialStateProperty.all<Color>(
                             AppColors.mainGreen,
                           ),
-                          shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(4.0),
-                              side:
-                                  const BorderSide(color: AppColors.mainGreen),
+                              side: const BorderSide(color: AppColors.mainGreen),
                             ),
                           ),
                         ),
@@ -236,24 +238,19 @@ class _DetailScreenState extends State<DetailScreen> {
           height: MediaQuery.of(context).size.height * .045,
           width: MediaQuery.of(context).size.width * .1,
           decoration: BoxDecoration(
-            color: selectedCupSizeIndex == ownIndex
-                ? AppColors.mainGreen.withOpacity(.5)
-                : AppColors.buttonGrey,
+            color: selectedCupSizeIndex == ownIndex ? AppColors.mainGreen.withOpacity(.5) : AppColors.buttonGrey,
             borderRadius: BorderRadius.circular(
               5,
             ),
             border: Border.all(
-              color: selectedCupSizeIndex == ownIndex
-                  ? AppColors.mainGreen
-                  : AppColors.buttonGrey,
+              color: selectedCupSizeIndex == ownIndex ? AppColors.mainGreen : AppColors.buttonGrey,
               width: 2,
             ),
           ),
           child: Stack(
             children: [
               Positioned(
-                top: 4.0 *
-                    (item['scaleRatio'] % 2 == 0 ? 1 : item['scaleRatio']),
+                top: 4.0 * (item['scaleRatio'] % 2 == 0 ? 1 : item['scaleRatio']),
                 left: 0,
                 right: 0,
                 child: SvgPicture.asset(
