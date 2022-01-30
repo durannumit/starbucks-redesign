@@ -38,7 +38,7 @@ Starbucks App Redesign is a small Flutter UI Challange[Under development]
  * [ ] Home Screen
  * [ ] Order Screen
  * [ ] Order Detail Screen
- * [ ] Menu/Detail Screen
+ * [x] Menu/Detail Screen
  * [ ] Order/Completed Screen
  * [ ] Home/Status Screen
 
@@ -58,6 +58,7 @@ Feel free to contribute
 
 
 * [Ümit Duran](https://github.com/durannumit)
+* [Emre Coşkunçay](https://github.com/coskuncay)
 
 
 ## License
