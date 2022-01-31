@@ -19,6 +19,7 @@ dependencies:
 
   flutter_svg: ^1.0.0
   google_fonts: ^2.2.0
+  syncfusion_flutter_gauges: ^19.4.47
 
 
 

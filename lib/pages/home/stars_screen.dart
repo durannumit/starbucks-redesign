@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:starbucks_redesign/constants/colors.dart';
 import 'package:starbucks_redesign/utils/device/device_utils.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class StarsScreen extends StatefulWidget {
   const StarsScreen({Key? key}) : super(key: key);
@@ -19,7 +20,10 @@ class _StarsScreenState extends State<StarsScreen> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [_starbucksCard()],
+      children: [
+        _starbucksCard(),
+        _freeCoffeeBar(),
+      ],
     );
   }
 
@@ -70,6 +74,68 @@ class _StarsScreenState extends State<StarsScreen> {
             ),
           ),
         ),
+      ],
+    );
+  }
+
+  Widget _freeCoffeeBar() {
+    return Row(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(0.0),
+          child: Container(
+              child: SfRadialGauge(axes: <RadialAxis>[
+            RadialAxis(
+                showLabels: false,
+                showTicks: false,
+                canScaleToFit: true,
+                radiusFactor: 0.9,
+                minimum: 0,
+                maximum: 15,
+                axisLineStyle: AxisLineStyle(
+                  thickness: 0.1,
+                  color: AppColors.proggressBarDarkGreen.withOpacity(0.5),
+                  thicknessUnit: GaugeSizeUnit.factor,
+                  cornerStyle: CornerStyle.bothFlat,
+                ),
+                pointers: const <GaugePointer>[
+                  RangePointer(
+                    value: 4,
+                    width: 0.2,
+                    sizeUnit: GaugeSizeUnit.factor,
+                    enableAnimation: true,
+                    animationDuration: 100,
+                    color: AppColors.proggressBarDarkGreen,
+                    animationType: AnimationType.linear,
+                    cornerStyle: CornerStyle.bothFlat,
+                    pointerOffset: -0.05,
+                  )
+                ],
+                annotations: <GaugeAnnotation>[
+                  GaugeAnnotation(
+                      positionFactor: 0,
+                      widget: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SvgPicture.asset(
+                                'assets/images/coffee_cup.svg',
+                                alignment: Alignment.center,
+                              ),
+                              Text(
+                                'FIFTEEN DAYS SCORE',
+                                style: TextStyle(color: Colors.grey[400], fontFamily: 'UbuntuMedium'),
+                              )
+                            ],
+                          )
+                        ],
+                      ))
+                ]),
+          ])),
+        )
       ],
     );
   }
