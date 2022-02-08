@@ -31,4 +31,5 @@ class AppColors {
   static const Color buttonGrey = Color(0xFFDFE4EC);
   static const Color softGrey = Color(0xFFEFF4FD);
   static const Color proggressBarDarkGreen = Color(0xFF1D4D4F);
+  static const Color gold = Color(0xFFC1A063);
 }
