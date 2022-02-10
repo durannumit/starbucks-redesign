@@ -8,6 +8,38 @@ class OrderCompletedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Material(
+        elevation: 20,
+        child: Container(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 10,
+          ),
+          child: SizedBox(
+            height: 50,
+            child: ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(
+                  AppColors.mainGreen,
+                ),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    side: const BorderSide(color: AppColors.mainGreen),
+                  ),
+                ),
+              ),
+              onPressed: () {},
+              child: Center(
+                child: Text(
+                  'Kapat',
+                  style: Theme.of(context).textTheme.button,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
       appBar: AppBar(
         backgroundColor: Colors.white,
         centerTitle: false,
@@ -31,13 +63,13 @@ class OrderCompletedScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
+            Container(
+              color: AppColors.background,
               height: MediaQuery.of(context).size.height * .4,
+              width: double.infinity,
               child: Column(
                 children: [
-                  SvgPicture.asset(
-                    'assets/icon/check_icon.svg',
-                  ),
+                  Image.asset('assets/images/Success.png'),
                   const SizedBox(
                     height: 20,
                   ),
@@ -72,41 +104,46 @@ class OrderCompletedScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         const SizedBox(height: 20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Tebrikler',
-                              style: Theme.of(context).textTheme.headline3,
-                            ),
-                            Container(
-                              height: 25,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5),
-                                border: Border.all(
-                                  color: AppColors.buttonGrey,
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Tebrikler',
+                                style: Theme.of(context).textTheme.headline4,
+                              ),
+                              Container(
+                                height: 30,
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  border: Border.all(
+                                    color: AppColors.buttonGrey,
+                                  ),
+                                  color: AppColors.darkGreen,
                                 ),
-                                color: AppColors.darkGreen,
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  const Text(
-                                    '+ 2',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Text(
+                                      '+ 2',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
                                     ),
-                                  ),
-                                  SvgPicture.asset(
-                                    'assets/icon/u_star.svg',
-                                    color: AppColors.gold,
-                                  ),
-                                ],
-                              ),
-                            )
-                          ],
+                                    const SizedBox(width: 5),
+                                    SvgPicture.asset(
+                                      'assets/icon/u_star.svg',
+                                      color: AppColors.gold,
+                                      height: 22,
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                         const SizedBox(height: 20),
                         Row(
@@ -117,11 +154,19 @@ class OrderCompletedScreen extends StatelessWidget {
                             ),
                             const SizedBox(width: 10),
                             Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text('Bizden 2 puan kazandın'),
-                                Text('Hazelnut Coffee'),
+                              children: [
+                                const Text(
+                                  'Bizden 2 puan kazandın',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                Text(
+                                  'Hazelnut Coffee',
+                                  style: Theme.of(context).textTheme.headline4,
+                                ),
                               ],
                             ),
                           ],
@@ -170,16 +215,19 @@ class OrderCompletedScreen extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            const SizedBox(
-                              width: 10,
-                            ),
+                            const SizedBox(width: 20),
                             SvgPicture.asset(
                               'assets/icon/u_star.svg',
                               color: AppColors.darkGreen,
-                              height: 30,
+                              height: 25,
                             ),
+                            const SizedBox(width: 10),
                             const Text(
                               '7 / 10',
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: AppColors.darkGreen,
+                              ),
                             ),
                           ],
                         ),
@@ -187,36 +235,6 @@ class OrderCompletedScreen extends StatelessWidget {
                     ),
                   ),
                 ],
-              ),
-            ),
-            Material(
-              elevation: 10,
-              child: Padding(
-                padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.05),
-                child: SizedBox(
-                  height: 50,
-                  child: ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                        AppColors.mainGreen,
-                      ),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(4.0),
-                          side: const BorderSide(color: AppColors.mainGreen),
-                        ),
-                      ),
-                    ),
-                    onPressed: () {},
-                    child: Center(
-                      child: Text(
-                        'Satın Al',
-                        style: Theme.of(context).textTheme.button,
-                      ),
-                    ),
-                  ),
-                ),
               ),
             ),
           ],
