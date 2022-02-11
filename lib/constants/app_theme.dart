@@ -29,8 +29,8 @@ final ThemeData themeData = ThemeData(
     ),
     headline4: const TextStyle(
       color: AppColors.dark,
-      fontWeight: FontWeight.w700,
-      fontSize: 16,
+      fontWeight: FontWeight.w900,
+      fontSize: 14,
     ),
     bodyText1: const TextStyle(
       fontWeight: FontWeight.bold,

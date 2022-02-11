@@ -10,6 +10,7 @@ class OrderCompletedScreen extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: Material(
         elevation: 20,
+        color: Colors.white,
         child: Container(
           padding: const EdgeInsets.symmetric(
             horizontal: 20,

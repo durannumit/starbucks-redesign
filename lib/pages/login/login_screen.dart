@@ -146,7 +146,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               onPressed: () {
-                Navigator.of(context).pushNamed(Routes.order);
+                Navigator.of(context).pushNamed(Routes.home);
               },
               child: const Center(
                   child: Text(
