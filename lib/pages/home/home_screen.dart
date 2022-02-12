@@ -69,12 +69,14 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(width: 20),
           ],
         ),
-        body: Column(
-          children: [
-            Center(
-              child: _widgetOptions.elementAt(_selectedIndex),
-            ),
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Center(
+                child: _widgetOptions.elementAt(_selectedIndex),
+              ),
+            ],
+          ),
         ),
         bottomNavigationBar: Container(
             decoration: const BoxDecoration(
