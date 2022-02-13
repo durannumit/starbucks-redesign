@@ -14,7 +14,7 @@ class OrderCompletedScreen extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.symmetric(
             horizontal: 20,
-            vertical: 10,
+            vertical: 20,
           ),
           child: SizedBox(
             height: 50,
@@ -66,7 +66,7 @@ class OrderCompletedScreen extends StatelessWidget {
           children: [
             Container(
               color: AppColors.background,
-              height: MediaQuery.of(context).size.height * .4,
+              height: MediaQuery.of(context).size.height * .3,
               width: double.infinity,
               child: Column(
                 children: [

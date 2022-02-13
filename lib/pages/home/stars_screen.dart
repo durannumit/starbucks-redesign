@@ -294,7 +294,7 @@ class _StarsScreenState extends State<StarsScreen> {
                         child: Column(
                           children: [
                             ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
+                              borderRadius: const BorderRadius.only(topLeft: Radius.circular(8.0), topRight: Radius.circular(8.0)),
                               child: Image.asset(
                                 'assets/images/campaign.png',
                               ),

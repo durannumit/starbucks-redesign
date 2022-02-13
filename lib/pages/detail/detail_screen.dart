@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:starbucks_redesign/constants/colors.dart';
+import 'package:starbucks_redesign/utils/routes/routes.dart';
 
 class DetailScreen extends StatefulWidget {
   const DetailScreen({Key? key}) : super(key: key);
@@ -148,7 +149,9 @@ class _DetailScreenState extends State<DetailScreen> {
                             ),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushNamed(Routes.order);
+                        },
                         child: Center(
                           child: Text(
                             'Satın Al',

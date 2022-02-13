@@ -3,6 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:starbucks_redesign/constants/colors.dart';
 import 'package:starbucks_redesign/pages/home/stars_screen.dart';
 
+import 'create_order_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -20,16 +22,13 @@ class _HomeScreenState extends State<HomeScreen> {
   static const TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     StarsScreen(),
+    CreateOrderScreen(),
     Text(
-      'Index 1: Business',
+      'Index 2: Pay',
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Settings',
+      'Index 3: Location',
       style: optionStyle,
     ),
   ];
