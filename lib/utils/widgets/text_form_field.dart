@@ -13,7 +13,7 @@ class TextFormInput extends StatefulWidget {
   final Icon? suffixIcon;
   final Icon? prefixIcon;
 
-  TextFormInput({
+  const TextFormInput({
     Key? key,
     this.textEditingController,
     this.label,
@@ -25,6 +25,8 @@ class TextFormInput extends StatefulWidget {
     this.suffixIcon,
     this.prefixIcon,
   }) : super(key: key);
+
+  @override
   _TextInput createState() => _TextInput();
 }
 
