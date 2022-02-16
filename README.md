@@ -22,7 +22,7 @@
   App 
 </p>
 
-<img src="https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/app.png" height="400"> <img src="https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/login.png" height="400"> <img src="https://user-images.githubusercontent.com/29631083/151706246-d89de59d-93d2-48a8-8d49-d4c0ddecc8e3.png" height="400"> <img src="https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/order_completed.png" height="400">
+<img src="https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/app.png" height="400"> <img src="https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/login.png" height="400"> <img src="https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/home_page.png" height="400"> <img src="https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/order.png" height="400"> <img src="https://user-images.githubusercontent.com/29631083/151706246-d89de59d-93d2-48a8-8d49-d4c0ddecc8e3.png" height="400"> <img src="https://github.com/durannumit/starbucks-redesign/blob/main/screenshots/order_completed.png" height="400">
 
 
 
@@ -36,8 +36,8 @@ Starbucks App Redesign is a small Flutter UI Challange[Under development]
 
  * [x] Splash Screen
  * [x] Login Screen
- * [ ] Home Screen
- * [ ] Order Screen
+ * [x] Home Screen
+ * [x] Order Screen
  * [ ] Order Detail Screen
  * [x] Menu/Detail Screen
  * [x] Order/Completed Screen
